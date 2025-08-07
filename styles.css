@@ -59,6 +59,7 @@ nav ul li a {
 /* banner */
 .banner {
     display: flex;
+    justify-content: space-between;
 }
 
 .banner-contant {
