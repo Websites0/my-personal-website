@@ -1,6 +1,4 @@
-
-
-
+/* google fonts set */
 .open-sans-normal {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -11,11 +9,18 @@
 }
 
 
-nav{
+
+
+nav {
     display: flex;
 }
 
-.nav-title{
+.nav-title {
     font-weight: 800;
     font-size: 45px;
+}
+
+nav ul li {
+    list-style: none;
+ 
 }
