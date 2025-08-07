@@ -10,7 +10,7 @@
 
 
 
-.pry-button{
+.pry-button {
     background-color: #fd6e0a;
     color: white;
     font-weight: bold;
@@ -37,7 +37,7 @@ nav {
     font-size: 45px;
 }
 
-nav ul{
+nav ul {
     display: flex;
     align-items: center;
 }
@@ -52,4 +52,17 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-size: 20px;
+}
+
+
+
+/* banner */
+.banner-gre {
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.banner-tit {
+    font-weight: bold;
+
 }
