@@ -6,6 +6,10 @@
     border: 5px solid gray;
     margin: 0;
 }
-.mahir h3{
+.mahir img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
    
 }
