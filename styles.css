@@ -24,8 +24,13 @@ nav {
     font-size: 45px;
 }
 
+nav ul{
+    display: flex;
+}
+
 nav ul li {
     list-style: none;
+    margin: 51px;
 
 }
 
