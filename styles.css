@@ -64,5 +64,11 @@ nav ul li a {
 
 .banner-tit {
     font-weight: bold;
+    font-size: 85px;
+
+}
+
+.banner-prf {
+    width: 580px;
 
 }
