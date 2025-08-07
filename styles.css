@@ -57,6 +57,14 @@ nav ul li a {
 
 
 /* banner */
+.banner {
+    display: flex;
+}
+
+.banner-contant {
+    max-width: 580px;
+}
+
 .banner-gre {
     font-size: 45px;
     font-weight: 600;
