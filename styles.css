@@ -124,7 +124,10 @@ main {
     padding: 130px 150px;
     text-align: center;
     margin-top: 130px;
-    
 
+}
+
+.item-des {
+    font-weight: 600;
 
 }
