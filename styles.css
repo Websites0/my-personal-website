@@ -10,7 +10,7 @@
 
 /* use in all */
 
-.secondary-bg{
+.secondary-bg {
     background-color: #fff8f3;
 }
 
@@ -109,9 +109,17 @@ nav ul li a {
 
 }
 
+/* main styles */
+
+main {
+    max-width: 1140px;
+    margin: 0 auto;
+
+}
+
 /* about styles */
 
-.about{
+.about {
     border-radius: 10px;
-    
+
 }
