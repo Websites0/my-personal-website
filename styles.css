@@ -127,6 +127,12 @@ main {
 
 }
 
+.about-items{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
 .item-des {
     font-weight: 600;
 
