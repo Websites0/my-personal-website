@@ -152,5 +152,6 @@ main {
 .skill{
     padding: 30px;
     border-radius: 5px;
+    box-shadow: 0 6px 50px 0 rgba(0, 0, 0, 0.06);
 
 }
