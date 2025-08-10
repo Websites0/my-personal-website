@@ -160,3 +160,10 @@ main section{
     box-shadow: 0 6px 50px 0 rgba(0, 0, 0, 0.06);
 
 }
+
+/* resume styles */
+
+.resume-contain{
+    display: flex;
+    gap: 24px;
+}
