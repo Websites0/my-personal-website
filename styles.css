@@ -41,6 +41,10 @@
 
 }
 
+.text-center {
+    text-align: center;
+}
+
 /* header style */
 .header {
     background-image: url(https://uploads.onecompiler.io/43ausgzbg/43gnx772y/1000005602.png), url(https://uploads.onecompiler.io/43ausgzbg/43gnx772y/1000005604.png);
@@ -127,10 +131,10 @@ main {
 
 }
 
-.about-items{
+.about-items {
     display: flex;
     justify-content: space-around;
-    
+
 }
 
 .item-des {
