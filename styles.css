@@ -170,7 +170,14 @@ main section {
 
 }
 
-.experience-descrip,.experience-sub-tit {
+.experience-sub-tit {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.experience-descrip,
+.experience-sub-tit {
     color: #757575;
 
 }
