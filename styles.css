@@ -144,6 +144,8 @@ main {
 
 /* skill container */
 
-.skills-container{
+.skills-container {
     display: flex;
+    gap: 24px;
+
 }
