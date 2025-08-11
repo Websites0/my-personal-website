@@ -192,3 +192,9 @@ main section {
 }
 
 /* footer styles */
+
+footer{
+    display: flex;
+    padding: 130px 230px;
+    
+}
