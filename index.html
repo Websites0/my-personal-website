@@ -1,235 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alex Rivera | Organic AI Nexus &amp; Cognitive Architect</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2dd4bf", // Ethereal Teal
+                        "secondary": "#fbbf24", // Gold Glow
+                        "cosmic-purple": "#2e1065",
+                        "cosmic-navy": "#0f172a",
+                        "background-dark": "#020617",
+                        "card-dark": "rgba(30, 41, 59, 0.4)",
+                        "border-organic": "rgba(45, 212, 191, 0.2)"
+                    },
+                    fontFamily: {
+                        "display": ["Open Sans", "sans-serif"],
+                        "mono": ["IBM Plex Mono", "monospace"]
+                    },
+                    borderRadius: {"DEFAULT": "12px", "lg": "16px", "xl": "24px", "2xl": "32px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        html { scroll-behavior: smooth; }
+        body {
+            @apply bg-background-dark text-slate-300 antialiased;
+            background-image: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #020617 100%);
+        }
+        .organic-glow-teal {
+            box-shadow: 0 0 30px rgba(45, 212, 191, 0.15);
+        }
+        .organic-glow-gold {
+            box-shadow: 0 0 30px rgba(251, 191, 36, 0.1);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 40px rgba(45, 212, 191, 0.3);
+            border-color: #2dd4bf;
+        }
+        .text-ethereal-teal {
+            text-shadow: 0 0 12px rgba(45, 212, 191, 0.4);
+        }
+        .text-ethereal-gold {
+            text-shadow: 0 0 12px rgba(251, 191, 36, 0.3);
+        }
+        .mono-detail {
+            @apply font-mono tracking-tight text-[11px];
+        }
+        .nebula-bg {
+            background: radial-gradient(circle at 20% 30%, rgba(46, 16, 101, 0.4) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(15, 23, 42, 0.6) 0%, transparent 50%);
+        }
+    </style>
 </head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-    rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script src="https://kit.fontawesome.com/90919811e5.js" crossorigin="anonymous"></script>
-
-<body class="open-sans-normal">
-    <header class="header secondary-bg">
-
-        <nav>
-            <h3 class="nav-title">Ma<span style="color: #FD6E0A;">r</span>y</h3>
-            <ul>
-                <li><a class="dark-2" href="">Portfolio</a></li>
-                <li><a class="dark-2" href="">Blog</a></li>
-                <li><a href=""><button class="pry-button">Hire me</button></a></li>
-            </ul>
-        </nav>
-        <div class="banner">
-            <div class="banner-contant">
-                <h4 class="banner-gre">Hi, I am</h4>
-                <h1 class="banner-tit">Mary Hardy</h1>
-                <p class="banner-description">
-                    I am a Front-end Developer with a passion for creating beautiful and functional
-                    websites. I love to turn ideas into reality using the latest web technologies.
-                </p>
-                <button class="pry-button"><i class="fa-solid fa-download"></i> Download CV</button>
-                <button class="pry-button"><i class="fa-solid fa-phone-volume"></i> Contact</button>
+<body class="font-display transition-colors duration-500 nebula-bg">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-background-dark/80 backdrop-blur-2xl border-b border-white/5 transition-colors">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<a class="text-xl font-bold tracking-tight text-white flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary">hub</span>
+    ALEX<span class="text-primary">NEXUS</span>
+</a>
+<div class="hidden md:flex items-center gap-10 font-mono text-xs">
+<a class="text-slate-400 hover:text-primary transition-colors flex items-center gap-2" href="#about">
+<span class="text-[10px] text-primary/40">01.</span> COGNITION
+            </a>
+<a class="text-slate-400 hover:text-primary transition-colors flex items-center gap-2" href="#skills">
+<span class="text-[10px] text-primary/40">02.</span> BIOMORPHIC_ALGS
+            </a>
+<a class="text-slate-400 hover:text-primary transition-colors flex items-center gap-2" href="#projects">
+<span class="text-[10px] text-primary/40">03.</span> SYNAPSES
+            </a>
+<a class="text-slate-400 hover:text-primary transition-colors flex items-center gap-2" href="#contact">
+<span class="text-[10px] text-primary/40">04.</span> HARMONY
+            </a>
+<div class="h-6 w-px bg-white/10"></div>
+<button aria-label="Toggle Nexus" class="p-2.5 rounded-full border border-primary/20 text-primary hover:bg-primary/10 transition-all">
+<span class="material-icons-round text-xl">blur_on</span>
+</button>
+</div>
+<button class="md:hidden p-2 text-primary">
+<span class="material-icons-round">menu_open</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<section class="min-h-[90vh] flex flex-col justify-center relative overflow-hidden" id="about">
+<div class="absolute top-1/4 -right-32 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[160px] pointer-events-none"></div>
+<div class="absolute bottom-1/4 -left-32 w-[600px] h-[600px] bg-cosmic-purple/20 rounded-full blur-[160px] pointer-events-none"></div>
+<div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+<div class="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-primary/30 text-primary font-mono text-[11px] mb-12 bg-primary/5 organic-glow-teal">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                Collective Intelligence: Active
             </div>
-            <img class="banner-prf" src="https://uploads.onecompiler.io/43ausgzbg/43gnx772y/1000005603.png">
-        </div>
-
-
-    </header>
-    <main>
-
-        <section class="about secondary-bg">
-
-            <h3 class="section-title">About Me</h3>
-
-            <p class="section-descrip">
-                I am a Front-end Developer with a passion for creating beautiful and functional websites. I love to turn
-                ideas
-                into reality using the latest web technologies. I have experience in HTML, CSS, JavaScript, and React. I
-                am
-                always eager to learn new skills and improve my craft.
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-10 leading-[1.1]">
+                Nurturing <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto]">Biomorphic</span><br/>
+<span class="text-ethereal-teal">Neural Ecosystems.</span>
+</h1>
+<p class="text-lg md:text-2xl text-slate-300 mb-14 max-w-3xl mx-auto leading-relaxed font-light">
+                I am Alex Rivera—a cognitive computing architect. I design harmonious system integrations that blend natural intelligence patterns with advanced digital logic.
             </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-8 font-mono">
+<a class="w-full sm:w-auto px-12 py-5 bg-primary text-background-dark font-bold rounded-full transition-all organic-glow-teal flex items-center justify-center gap-3 hover:scale-105" href="#projects">
+                    SYNC_FLOW
+                    <span class="material-icons-round text-sm">auto_awesome</span>
+</a>
+<a class="w-full sm:w-auto px-12 py-5 border-2 border-secondary/40 text-secondary font-bold rounded-full hover:bg-secondary/5 transition-all flex items-center justify-center gap-3 organic-glow-gold" href="#">
+<span class="material-icons-round text-lg">psychology</span>
+                    PULSE_REPORT
+                </a>
+</div>
+</div>
+</section>
+<section class="py-32 border-y border-white/5 bg-white/5 backdrop-blur-md" id="skills">
+<div class="max-w-6xl mx-auto px-6">
+<div class="mb-24 text-center">
+<h2 class="text-4xl font-bold text-white tracking-tight mb-6">Cognitive Foundations</h2>
+<p class="text-slate-400 font-mono text-sm max-w-2xl mx-auto leading-relaxed">
+    Biological algorithms and fluid architectures designed for organic scalability and deep system resonance.
+</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center organic-glow-teal">
+<div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
+<span class="material-icons-round text-4xl">grain</span>
+</div>
+<h3 class="font-bold text-white mb-3">React.nexus</h3>
+<p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">FLUID_INTERFACES</p>
+</div>
+<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
+<span class="material-icons-round text-4xl">hive</span>
+</div>
+<h3 class="font-bold text-white mb-3">Node Synapse</h3>
+<p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">CORE_INTEGRATION</p>
+</div>
+<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
+<span class="material-icons-round text-4xl">model_training</span>
+</div>
+<h3 class="font-bold text-white mb-3">Neural Python</h3>
+<p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">BIOMORPHIC_AI</p>
+</div>
+<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
+<span class="material-icons-round text-4xl">memory</span>
+</div>
+<h3 class="font-bold text-white mb-3">Postgres Flow</h3>
+<p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">NEURAL_STORAGE</p>
+</div>
+<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
+<span class="material-icons-round text-4xl">filter_tilt_shift</span>
+</div>
+<h3 class="font-bold text-white mb-3">Cosmic Cloud</h3>
+<p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">TOTAL_SYNC</p>
+</div>
+<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
+<span class="material-icons-round text-4xl">all_inclusive</span>
+</div>
+<h3 class="font-bold text-white mb-3">Docker Cells</h3>
+<p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">CONTAINER_LIFE</p>
+</div>
+<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
+<span class="material-icons-round text-4xl">blur_circular</span>
+</div>
+<h3 class="font-bold text-white mb-3">Fluid HTML</h3>
+<p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">ORGANIC_LAYOUT</p>
+</div>
+<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
+<span class="material-icons-round text-4xl">terminal</span>
+</div>
+<h3 class="font-bold text-white mb-3">LogicScript</h3>
+<p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">STRICT_COGNITION</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32" id="projects">
+<div class="max-w-6xl mx-auto px-6">
+<div class="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div>
+<h2 class="text-4xl font-bold text-white mb-5 tracking-tight">System Synapses</h2>
+<p class="text-slate-400 font-mono text-sm max-w-2xl leading-relaxed">
+    Selected manifestations of cognitive computing and harmonious data orchestration.
+</p>
+</div>
+<a class="text-secondary hover:text-white font-mono text-[11px] font-bold tracking-widest inline-flex items-center gap-3 group transition-all" href="#">
+    EXPLORE_NEXUS_CHANNELS 
+    <span class="material-icons-round text-sm group-hover:translate-x-2 transition-transform">auto_awesome_motion</span>
+</a>
+</div>
+<div class="space-y-16">
+<article class="bg-card-dark/40 backdrop-blur-xl border border-white/5 rounded-[40px] hover:border-primary/30 transition-all group flex flex-col md:flex-row overflow-hidden organic-glow-teal">
+<div class="md:w-5/12 h-72 md:h-auto relative overflow-hidden">
+<img alt="Fluid dashboard interface with teal accents" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN7_nM0DSZjf59ESDJgia2PYE90E1wsYw4-8A2flpfpx7tPtvwLdE7o-lJI5CZMUn4Jwh7OaMJwaYwTTobrA-fuvssK0r8Jy8RLvRoBYaU0PXoOAr7l0P-tCMy6tRL9ENc9SORFJIMPGFSMa14q9E8QSH-z0IgxAuM59EJqq5dO9JpYrk4RGaK7cTV7fTm35_p6_tIJf_8ODWKNKDJ0fzBHkyqJVvMASqoZqajqKeHUQ3OjgFZ4m6hkuBweYVwskccr8-xQHw0VR38"/>
+<div class="absolute inset-0 bg-cosmic-purple/40 mix-blend-soft-light"></div>
+</div>
+<div class="p-12 md:w-7/12 flex flex-col justify-center">
+<div class="flex justify-between items-start mb-8">
+<div>
+<span class="font-mono text-[10px] text-primary/60 uppercase mb-3 block tracking-[0.2em]">SYNAPSE_01</span>
+<h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors tracking-tight">Ethereal Matrix</h3>
+</div>
+<a class="p-3 rounded-full border border-white/10 text-primary hover:bg-primary/20 transition-all" href="#">
+<span class="material-icons-round">explore</span>
+</a>
+</div>
+<p class="text-slate-300 mb-10 text-lg leading-relaxed font-light">
+    Transforming linear metrics into a living, breathing multidimensional ecosystem. Featuring biomorphic data flows and autonomous cognitive reporting.
+</p>
+<div class="flex flex-wrap gap-4 font-mono">
+<span class="px-4 py-1.5 rounded-full text-[10px] font-semibold text-primary bg-primary/10 border border-primary/20">React_Fluid</span>
+<span class="px-4 py-1.5 rounded-full text-[10px] font-semibold text-primary bg-primary/10 border border-primary/20">Cognitive_D3</span>
+<span class="px-4 py-1.5 rounded-full text-[10px] font-semibold text-slate-500 bg-white/5 border border-white/10">Neural_Sync</span>
+</div>
+</div>
+</article>
+<article class="bg-card-dark/40 backdrop-blur-xl border border-white/5 rounded-[40px] hover:border-secondary/30 transition-all group flex flex-col md:flex-row-reverse overflow-hidden organic-glow-gold">
+<div class="md:w-5/12 h-72 md:h-auto relative overflow-hidden">
+<img alt="Organic communication interface" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIlkpFH22vYJILuUwxUYX0yH9KdeDgWkcPuFfeN3ylJlarGgVeqMRTM5zIc-0hC_OCj1nCuKqmrLZ9d66Lia6xNF3uUyzdIOy6S1zYxSSnOLWDYVpF6hsSUM2_qS4_KqEwFQhg05dct0rqwLTa1YB97GjzrTY1B9G06Poe_yibyWJLRgSg0bOL3nO_y7u0TbrkRhcSDSMxbtWB6grpf3NXSe1UHqAhYCRKULyMpdqbIiE5XquLmslu9-TMpuCVDEW4Cz8gvH0XgRVM"/>
+<div class="absolute inset-0 bg-cosmic-navy/40 mix-blend-soft-light"></div>
+</div>
+<div class="p-12 md:w-7/12 flex flex-col justify-center">
+<div class="flex justify-between items-start mb-8">
+<div>
+<span class="font-mono text-[10px] text-secondary/60 uppercase mb-3 block tracking-[0.2em]">SYNAPSE_02</span>
+<h3 class="text-3xl font-bold text-white group-hover:text-secondary transition-colors tracking-tight">Resonance Protocols</h3>
+</div>
+<a class="p-3 rounded-full border border-white/10 text-secondary hover:bg-secondary/20 transition-all" href="#">
+<span class="material-icons-round">language</span>
+</a>
+</div>
+<p class="text-slate-300 mb-10 text-lg leading-relaxed font-light">
+    A low-latency neural communication hub. Engineered for high-density cognitive exchange, secured by biometric encryption and distributed consensus.
+</p>
+<div class="flex flex-wrap gap-4 font-mono">
+<span class="px-4 py-1.5 rounded-full text-[10px] font-semibold text-secondary bg-secondary/10 border border-secondary/20">Bio_Socket</span>
+<span class="px-4 py-1.5 rounded-full text-[10px] font-semibold text-secondary bg-secondary/10 border border-secondary/20">IBM_Plex</span>
+<span class="px-4 py-1.5 rounded-full text-[10px] font-semibold text-slate-500 bg-white/5 border border-white/10">Deep_Cache</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<footer class="bg-background-dark border-t border-white/5 pt-24 pb-16 relative overflow-hidden" id="contact">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+<h2 class="text-5xl font-bold text-white mb-10 tracking-tight">Initiate Convergence</h2>
+<p class="text-slate-400 font-mono text-sm mb-14 max-w-xl mx-auto leading-relaxed">
+    Seeking collaborative resonance. If your objective aligns with cognitive innovation and architectural harmony, open a channel.
+</p>
+<a class="inline-flex items-center justify-center gap-4 px-12 py-6 rounded-full border border-primary/40 text-primary font-mono text-sm hover:bg-primary/5 transition-all mb-20 organic-glow-teal" href="mailto:alex.rivera@nexus.ai">
+<span class="material-icons-round">contactless</span>
+                CONVERGENCE_ID: alex.rivera@nexus.ai
+            </a>
+<div class="flex justify-center gap-12">
+<a aria-label="Github" class="text-slate-500 hover:text-primary transition-all transform hover:scale-125" href="#">
+<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+<a aria-label="LinkedIn" class="text-slate-500 hover:text-primary transition-all transform hover:scale-125" href="#">
+<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a aria-label="Twitter" class="text-slate-500 hover:text-primary transition-all transform hover:scale-125" href="#">
+<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</a>
+</div>
+<div class="mt-24 font-mono text-[10px] text-slate-600 tracking-[0.4em] uppercase">
+<p>© Alex Rivera Cognitive Nexus // Orchestrated for the next evolutionary leap.</p>
+</div>
+</div>
+</footer>
+</main>
 
-            <div class="about-items">
-
-                <div class="about-item">
-                    <p class="iten-tit">Name</p>
-                    <p class="item-des">Mary Hardy</p>
-                </div>
-                <div class="about-item">
-                    <p class="iten-tit">Email</p>
-                    <p class="item-des">abc@gmail.com</p>
-                </div>
-                <div class="about-item">
-                    <p class="iten-tit">Date of Birth</p>
-                    <p class="item-des">Dec 23, 2005</p>
-                </div>
-                <div class="about-item">
-                    <p class="iten-tit">From</p>
-                    <p class="item-des">Dhaka, BD</p>
-                </div>
-
-            </div>
-
-
-        </section>
-
-        <section class="skills">
-            <h3 class="section-tit text-center">What I Do</h3>
-            <p class="section-des text-center">
-                I have more than 10 years experience building software for clients all over
-                the world. Below is a quick overview of my main technical skill sets and technologies i use. Want to
-                find out more about my experience? Check out my online resume and project portfolio.
-            </p>
-
-            <!-- skill container -->
-
-            <div class="skills-container">
-
-                <div class="skill">
-                    <img src="https://uploads.onecompiler.io/43ausgzbg/43gnx772y/1000005638.png" alt="">
-                    <h4 class="skill-tit">Vanilla JavaScript</h4>
-                    <p class="skill-descrip">List skill/technologies here. You can change the icon above to any of the
-                        1500+
-                        FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</p>
-                </div>
-                <div class="skill">
-                    <img src="https://uploads.onecompiler.io/43ausgzbg/43gnx772y/1000005640.png" alt="">
-                    <h4 class="skill-tit">React</h4>
-                    <p class="skill-descrip">List skill/technologies here. You can change the icon above to any of the
-                        1500+
-                        FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</p>
-                </div>
-                <div class="skill">
-                    <img src="https://uploads.onecompiler.io/43ausgzbg/43gnx772y/1000005641.png" alt="">
-                    <h4 class="skill-tit">Node.js</h4>
-                    <p class="skill-descrip">List skill/technologies here. You can change the icon above to any of the
-                        1500+
-                        FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</p>
-                </div>
-                <div class="skill">
-                    <img src="https://uploads.onecompiler.io/43ausgzbg/43gnx772y/1000005639.png" alt="">
-                    <h4 class="skill-tit">Mongodb</h4>
-                    <p class="skill-descrip">List skill/technologies here. You can change the icon above to any of the
-                        1500+
-                        FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="resume">
-            <h3 class="section-tit text-center">A summary of My Resume</h3>
-
-            <div class="resume-contain">
-
-                <!-- Education Column -->
-                <div class="resume-column">
-                    <h3 class="resume-column-tit">My Education</h3>
-
-                    <div class="experience">
-                        <h4 class="experience-tit">Master in Computer Engineering</h4>
-                        <h5 class="experience-sub-tit">Harvard University / 2015 - 2017</h5>
-                        <div class="experience-descrip">
-                            List skill/technologies here. You can change the icon above
-                            to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="experience">
-                        <h4 class="experience-tit">Bachelor in Software Engineering</h4>
-                        <h5 class="experience-sub-tit">MIT / 2011 - 2015</h5>
-                        <div class="experience-descrip">
-                            List skill/technologies here. You can change the icon above
-                            to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="experience">
-                        <h4 class="experience-tit">Diploma in Computer Science</h4>
-                        <h5 class="experience-sub-tit">Community College / 2009 - 2011</h5>
-                        <div class="experience-descrip">
-                            List skill/technologies here. You can change the icon above
-                            to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Experience Column -->
-                <div class="resume-column">
-                    <h3 class="resume-column-tit">My Experience</h3>
-
-                    <div class="experience">
-                        <h4 class="experience-tit">Senior Front-End Developer</h4>
-                        <h5 class="experience-sub-tit">Google / 2020 - Present</h5>
-                        <div class="experience-descrip">
-                            List skill/technologies here. You can change the icon above
-                            to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="experience">
-                        <h4 class="experience-tit">Web Developer</h4>
-                        <h5 class="experience-sub-tit">Facebook / 2017 - 2020</h5>
-                        <div class="experience-descrip">
-                            List skill/technologies here. You can change the icon above
-                            to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="experience">
-                        <h4 class="experience-tit">Intern Developer</h4>
-                        <h5 class="experience-sub-tit">Startup Inc / 2016 - 2017</h5>
-                        <div class="experience-descrip">
-                            List skill/technologies here. You can change the icon above
-                            to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="text-center resume-download-cv">
-                <button class="pry-button"><i class="fa-solid fa-download"></i> Download CV</button>
-            </div>
-        </section>
-
-
-    </main>
-    <footer class="secondary-bg">
-
-        <div class="footer-column">
-            <h3 class="section-title">Lets Connect</h3>
-            <p>Please fill out the form on this section to contact with me or call between 9:00 A.M and 8.00 P.M ET,
-                Sunday
-                through Thursday.</p>
-            <div>
-                <a href=""><img src="https://uploads.onecompiler.io/43ausgzbg/43gnx772y/1000005644.png" alt=""></a>
-                <a href=""><img src="https://uploads.onecompiler.io/43ausgzbg/43gnx772y/1000005643.png" alt=""></a>
-                <a href=""><img src="https://uploads.onecompiler.io/43ausgzbg/43gnx772y/1000005642.png" alt=""></a>
-            </div>
-        </div>
-
-        <div class="footer-column">
-            <h3 class="section-title">Let’s Inbox me</h3>
-            <form action="">
-                <input type="text" name="" id="" placeholder="Your Name">
-                <input type="email" name="" id="" placeholder="Your Email">
-                <textarea name="" id="" cols="30" rows="20" placeholder="Message"></textarea>
-                <input class="pry-button" type="submit" value="Submit">
-            </form>
-        </div>
-
-
-    </footer>
-</body>
-
-</html>
+</body></html>
