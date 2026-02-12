@@ -35,8 +35,13 @@
 <style type="text/tailwindcss">
         html { scroll-behavior: smooth; }
         body {
-            @apply bg-background-dark text-slate-300 antialiased;
+            @apply bg-slate-50 text-slate-800 dark:bg-background-dark dark:text-slate-300 antialiased;
+        }
+        html.dark body {
             background-image: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #020617 100%);
+        }
+        html:not(.dark) body {
+            background-image: radial-gradient(circle at 50% 50%, #f8fafc 0%, #ffffff 100%);
         }
         .organic-glow-teal {
             box-shadow: 0 0 30px rgba(45, 212, 191, 0.15);
@@ -58,15 +63,22 @@
             @apply font-mono tracking-tight text-[11px];
         }
         .nebula-bg {
+            /* Base nebula styles */
+        }
+        html.dark .nebula-bg {
             background: radial-gradient(circle at 20% 30%, rgba(46, 16, 101, 0.4) 0%, transparent 50%),
                         radial-gradient(circle at 80% 70%, rgba(15, 23, 42, 0.6) 0%, transparent 50%);
+        }
+        html:not(.dark) .nebula-bg {
+             background: radial-gradient(circle at 20% 30%, rgba(45, 212, 191, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(251, 191, 36, 0.05) 0%, transparent 50%);
         }
     </style>
 </head>
 <body class="font-display transition-colors duration-500 nebula-bg">
-<nav class="fixed top-0 left-0 right-0 z-50 bg-background-dark/80 backdrop-blur-2xl border-b border-white/5 transition-colors">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-2xl border-b border-slate-200 dark:border-white/5 transition-colors">
 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-<a class="text-xl font-bold tracking-tight text-white flex items-center gap-2" href="#">
+<a class="text-xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2" href="#">
 <span class="material-symbols-outlined text-primary">hub</span>
     ALEX<span class="text-primary">NEXUS</span>
 </a>
@@ -84,13 +96,29 @@
 <span class="text-[10px] text-primary/40">04.</span> HARMONY
             </a>
 <div class="h-6 w-px bg-white/10"></div>
-<button aria-label="Toggle Nexus" class="p-2.5 rounded-full border border-primary/20 text-primary hover:bg-primary/10 transition-all">
+<button aria-label="Toggle Nexus" class="theme-toggle p-2.5 rounded-full border border-primary/20 text-primary hover:bg-primary/10 transition-all">
 <span class="material-icons-round text-xl">blur_on</span>
 </button>
 </div>
-<button class="md:hidden p-2 text-primary">
+<button id="mobile-menu-btn" class="md:hidden p-2 text-primary">
 <span class="material-icons-round">menu_open</span>
 </button>
+</div>
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-white/95 dark:bg-background-dark/95 backdrop-blur-xl hidden flex flex-col items-center justify-center transition-all duration-300">
+    <button id="close-menu-btn" class="absolute top-6 right-6 p-2 text-slate-800 dark:text-primary">
+        <span class="material-icons-round text-3xl">close</span>
+    </button>
+    <nav class="flex flex-col gap-8 text-center font-mono text-lg text-slate-800 dark:text-slate-300">
+        <a href="#about" class="hover:text-primary transition-colors">01. COGNITION</a>
+        <a href="#skills" class="hover:text-primary transition-colors">02. BIOMORPHIC_ALGS</a>
+        <a href="#projects" class="hover:text-primary transition-colors">03. SYNAPSES</a>
+        <a href="#contact" class="hover:text-primary transition-colors">04. HARMONY</a>
+    </nav>
+    <div class="mt-12">
+        <button class="theme-toggle p-3 rounded-full border border-slate-200 dark:border-primary/20 text-slate-800 dark:text-primary hover:bg-slate-100 dark:hover:bg-primary/10 transition-all">
+            <span class="material-icons-round text-xl">blur_on</span>
+        </button>
+    </div>
 </div>
 </nav>
 <main class="pt-20">
@@ -102,11 +130,11 @@
 <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
                 Collective Intelligence: Active
             </div>
-<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-10 leading-[1.1]">
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-10 leading-[1.1]">
                 Nurturing <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto]">Biomorphic</span><br/>
 <span class="text-ethereal-teal">Neural Ecosystems.</span>
 </h1>
-<p class="text-lg md:text-2xl text-slate-300 mb-14 max-w-3xl mx-auto leading-relaxed font-light">
+<p class="text-lg md:text-2xl text-slate-600 dark:text-slate-300 mb-14 max-w-3xl mx-auto leading-relaxed font-light">
                 I am Alex Rivera—a cognitive computing architect. I design harmonious system integrations that blend natural intelligence patterns with advanced digital logic.
             </p>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-8 font-mono">
@@ -121,69 +149,69 @@
 </div>
 </div>
 </section>
-<section class="py-32 border-y border-white/5 bg-white/5 backdrop-blur-md" id="skills">
+<section class="py-32 border-y border-slate-200 dark:border-white/5 bg-slate-50/50 dark:bg-white/5 backdrop-blur-md" id="skills">
 <div class="max-w-6xl mx-auto px-6">
 <div class="mb-24 text-center">
-<h2 class="text-4xl font-bold text-white tracking-tight mb-6">Cognitive Foundations</h2>
-<p class="text-slate-400 font-mono text-sm max-w-2xl mx-auto leading-relaxed">
+<h2 class="text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-6">Cognitive Foundations</h2>
+<p class="text-slate-500 dark:text-slate-400 font-mono text-sm max-w-2xl mx-auto leading-relaxed">
     Biological algorithms and fluid architectures designed for organic scalability and deep system resonance.
 </p>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center organic-glow-teal">
+<div class="group bg-white dark:bg-card-dark shadow-xl dark:shadow-none p-10 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center organic-glow-teal">
 <div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
 <span class="material-icons-round text-4xl">grain</span>
 </div>
-<h3 class="font-bold text-white mb-3">React.nexus</h3>
+<h3 class="font-bold text-slate-900 dark:text-white mb-3">React.nexus</h3>
 <p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">FLUID_INTERFACES</p>
 </div>
-<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="group bg-white dark:bg-card-dark shadow-xl dark:shadow-none p-10 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
 <div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
 <span class="material-icons-round text-4xl">hive</span>
 </div>
-<h3 class="font-bold text-white mb-3">Node Synapse</h3>
+<h3 class="font-bold text-slate-900 dark:text-white mb-3">Node Synapse</h3>
 <p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">CORE_INTEGRATION</p>
 </div>
-<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="group bg-white dark:bg-card-dark shadow-xl dark:shadow-none p-10 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
 <div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
 <span class="material-icons-round text-4xl">model_training</span>
 </div>
-<h3 class="font-bold text-white mb-3">Neural Python</h3>
+<h3 class="font-bold text-slate-900 dark:text-white mb-3">Neural Python</h3>
 <p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">BIOMORPHIC_AI</p>
 </div>
-<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="group bg-white dark:bg-card-dark shadow-xl dark:shadow-none p-10 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
 <div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
 <span class="material-icons-round text-4xl">memory</span>
 </div>
-<h3 class="font-bold text-white mb-3">Postgres Flow</h3>
+<h3 class="font-bold text-slate-900 dark:text-white mb-3">Postgres Flow</h3>
 <p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">NEURAL_STORAGE</p>
 </div>
-<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="group bg-white dark:bg-card-dark shadow-xl dark:shadow-none p-10 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
 <div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
 <span class="material-icons-round text-4xl">filter_tilt_shift</span>
 </div>
-<h3 class="font-bold text-white mb-3">Cosmic Cloud</h3>
+<h3 class="font-bold text-slate-900 dark:text-white mb-3">Cosmic Cloud</h3>
 <p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">TOTAL_SYNC</p>
 </div>
-<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="group bg-white dark:bg-card-dark shadow-xl dark:shadow-none p-10 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
 <div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
 <span class="material-icons-round text-4xl">all_inclusive</span>
 </div>
-<h3 class="font-bold text-white mb-3">Docker Cells</h3>
+<h3 class="font-bold text-slate-900 dark:text-white mb-3">Docker Cells</h3>
 <p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">CONTAINER_LIFE</p>
 </div>
-<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="group bg-white dark:bg-card-dark shadow-xl dark:shadow-none p-10 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
 <div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
 <span class="material-icons-round text-4xl">blur_circular</span>
 </div>
-<h3 class="font-bold text-white mb-3">Fluid HTML</h3>
+<h3 class="font-bold text-slate-900 dark:text-white mb-3">Fluid HTML</h3>
 <p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">ORGANIC_LAYOUT</p>
 </div>
-<div class="group bg-card-dark p-10 rounded-3xl border border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
+<div class="group bg-white dark:bg-card-dark shadow-xl dark:shadow-none p-10 rounded-3xl border border-slate-200 dark:border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col items-center justify-center text-center">
 <div class="w-16 h-16 mb-8 text-primary group-hover:scale-110 transition-transform flex items-center justify-center bg-primary/10 rounded-2xl">
 <span class="material-icons-round text-4xl">terminal</span>
 </div>
-<h3 class="font-bold text-white mb-3">LogicScript</h3>
+<h3 class="font-bold text-slate-900 dark:text-white mb-3">LogicScript</h3>
 <p class="font-mono text-[10px] text-primary/80 uppercase tracking-widest">STRICT_COGNITION</p>
 </div>
 </div>
@@ -193,18 +221,18 @@
 <div class="max-w-6xl mx-auto px-6">
 <div class="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
 <div>
-<h2 class="text-4xl font-bold text-white mb-5 tracking-tight">System Synapses</h2>
-<p class="text-slate-400 font-mono text-sm max-w-2xl leading-relaxed">
+<h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-5 tracking-tight">System Synapses</h2>
+<p class="text-slate-500 dark:text-slate-400 font-mono text-sm max-w-2xl leading-relaxed">
     Selected manifestations of cognitive computing and harmonious data orchestration.
 </p>
 </div>
-<a class="text-secondary hover:text-white font-mono text-[11px] font-bold tracking-widest inline-flex items-center gap-3 group transition-all" href="#">
+<a class="text-secondary hover:text-slate-900 dark:hover:text-white font-mono text-[11px] font-bold tracking-widest inline-flex items-center gap-3 group transition-all" href="#">
     EXPLORE_NEXUS_CHANNELS 
     <span class="material-icons-round text-sm group-hover:translate-x-2 transition-transform">auto_awesome_motion</span>
 </a>
 </div>
 <div class="space-y-16">
-<article class="bg-card-dark/40 backdrop-blur-xl border border-white/5 rounded-[40px] hover:border-primary/30 transition-all group flex flex-col md:flex-row overflow-hidden organic-glow-teal">
+<article class="bg-white/80 dark:bg-white dark:bg-card-dark shadow-xl dark:shadow-none/40 backdrop-blur-xl border border-slate-200 dark:border-white/5 rounded-[40px] hover:border-primary/30 transition-all group flex flex-col md:flex-row overflow-hidden organic-glow-teal shadow-xl dark:shadow-none">
 <div class="md:w-5/12 h-72 md:h-auto relative overflow-hidden">
 <img alt="Fluid dashboard interface with teal accents" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN7_nM0DSZjf59ESDJgia2PYE90E1wsYw4-8A2flpfpx7tPtvwLdE7o-lJI5CZMUn4Jwh7OaMJwaYwTTobrA-fuvssK0r8Jy8RLvRoBYaU0PXoOAr7l0P-tCMy6tRL9ENc9SORFJIMPGFSMa14q9E8QSH-z0IgxAuM59EJqq5dO9JpYrk4RGaK7cTV7fTm35_p6_tIJf_8ODWKNKDJ0fzBHkyqJVvMASqoZqajqKeHUQ3OjgFZ4m6hkuBweYVwskccr8-xQHw0VR38"/>
 <div class="absolute inset-0 bg-cosmic-purple/40 mix-blend-soft-light"></div>
@@ -213,13 +241,13 @@
 <div class="flex justify-between items-start mb-8">
 <div>
 <span class="font-mono text-[10px] text-primary/60 uppercase mb-3 block tracking-[0.2em]">SYNAPSE_01</span>
-<h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors tracking-tight">Ethereal Matrix</h3>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors tracking-tight">Ethereal Matrix</h3>
 </div>
 <a class="p-3 rounded-full border border-white/10 text-primary hover:bg-primary/20 transition-all" href="#">
 <span class="material-icons-round">explore</span>
 </a>
 </div>
-<p class="text-slate-300 mb-10 text-lg leading-relaxed font-light">
+<p class="text-slate-600 dark:text-slate-300 mb-10 text-lg leading-relaxed font-light">
     Transforming linear metrics into a living, breathing multidimensional ecosystem. Featuring biomorphic data flows and autonomous cognitive reporting.
 </p>
 <div class="flex flex-wrap gap-4 font-mono">
@@ -229,7 +257,7 @@
 </div>
 </div>
 </article>
-<article class="bg-card-dark/40 backdrop-blur-xl border border-white/5 rounded-[40px] hover:border-secondary/30 transition-all group flex flex-col md:flex-row-reverse overflow-hidden organic-glow-gold">
+<article class="bg-white/80 dark:bg-white dark:bg-card-dark shadow-xl dark:shadow-none/40 backdrop-blur-xl border border-slate-200 dark:border-white/5 rounded-[40px] hover:border-secondary/30 transition-all group flex flex-col md:flex-row-reverse overflow-hidden organic-glow-gold shadow-xl dark:shadow-none">
 <div class="md:w-5/12 h-72 md:h-auto relative overflow-hidden">
 <img alt="Organic communication interface" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIlkpFH22vYJILuUwxUYX0yH9KdeDgWkcPuFfeN3ylJlarGgVeqMRTM5zIc-0hC_OCj1nCuKqmrLZ9d66Lia6xNF3uUyzdIOy6S1zYxSSnOLWDYVpF6hsSUM2_qS4_KqEwFQhg05dct0rqwLTa1YB97GjzrTY1B9G06Poe_yibyWJLRgSg0bOL3nO_y7u0TbrkRhcSDSMxbtWB6grpf3NXSe1UHqAhYCRKULyMpdqbIiE5XquLmslu9-TMpuCVDEW4Cz8gvH0XgRVM"/>
 <div class="absolute inset-0 bg-cosmic-navy/40 mix-blend-soft-light"></div>
@@ -238,13 +266,13 @@
 <div class="flex justify-between items-start mb-8">
 <div>
 <span class="font-mono text-[10px] text-secondary/60 uppercase mb-3 block tracking-[0.2em]">SYNAPSE_02</span>
-<h3 class="text-3xl font-bold text-white group-hover:text-secondary transition-colors tracking-tight">Resonance Protocols</h3>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-white group-hover:text-secondary transition-colors tracking-tight">Resonance Protocols</h3>
 </div>
 <a class="p-3 rounded-full border border-white/10 text-secondary hover:bg-secondary/20 transition-all" href="#">
 <span class="material-icons-round">language</span>
 </a>
 </div>
-<p class="text-slate-300 mb-10 text-lg leading-relaxed font-light">
+<p class="text-slate-600 dark:text-slate-300 mb-10 text-lg leading-relaxed font-light">
     A low-latency neural communication hub. Engineered for high-density cognitive exchange, secured by biometric encryption and distributed consensus.
 </p>
 <div class="flex flex-wrap gap-4 font-mono">
@@ -257,11 +285,11 @@
 </div>
 </div>
 </section>
-<footer class="bg-background-dark border-t border-white/5 pt-24 pb-16 relative overflow-hidden" id="contact">
+<footer class="bg-slate-50 dark:bg-background-dark border-t border-slate-200 dark:border-white/5 pt-24 pb-16 relative overflow-hidden" id="contact">
 <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
 <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-<h2 class="text-5xl font-bold text-white mb-10 tracking-tight">Initiate Convergence</h2>
-<p class="text-slate-400 font-mono text-sm mb-14 max-w-xl mx-auto leading-relaxed">
+<h2 class="text-5xl font-bold text-slate-900 dark:text-white mb-10 tracking-tight">Initiate Convergence</h2>
+<p class="text-slate-500 dark:text-slate-400 font-mono text-sm mb-14 max-w-xl mx-auto leading-relaxed">
     Seeking collaborative resonance. If your objective aligns with cognitive innovation and architectural harmony, open a channel.
 </p>
 <a class="inline-flex items-center justify-center gap-4 px-12 py-6 rounded-full border border-primary/40 text-primary font-mono text-sm hover:bg-primary/5 transition-all mb-20 organic-glow-teal" href="mailto:alex.rivera@nexus.ai">
@@ -285,5 +313,5 @@
 </div>
 </footer>
 </main>
-
+<script src="script.js"></script>
 </body></html>
